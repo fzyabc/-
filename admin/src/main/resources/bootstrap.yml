@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: admin
+  profiles:
+    active: application,feign,register,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.85.8:8848
+        prefix: fzy
+        file-extension: yml
+

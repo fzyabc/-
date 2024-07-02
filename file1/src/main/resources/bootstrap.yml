@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: myfile
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.85.8:8848
+        prefix: fzy
+        file-extension: yml
+  profiles:
+    active: application,register,minio
+
+
+
+
+

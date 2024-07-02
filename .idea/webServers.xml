@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="147bb7c0-c4c8-45d8-9374-be2148d14b00" name="server08">
+        <fileTransfer rootFolder="/var/lib/docker/overlay2/1bc690589cd930696d9bd86f6530069856ff5eab902ad382907155694125a375/merged" accessType="SFTP" host="192.168.85.8" port="22" sshConfigId="e7c8db9e-a3de-4e26-93fa-75f0c521c8fc" sshConfig="root@192.168.85.8:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

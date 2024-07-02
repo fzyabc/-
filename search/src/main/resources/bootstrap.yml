@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: search
+  profiles:
+    active: register
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.85.8:8848
+        prefix: fzy
+        file-extension: yml
+  rabbitmq:
+    host: 192.168.85.8
+    port: 5672
+    username: admin
+    password: 123456789
+elasticsearch:
+  host: 192.168.85.8
+  port: 9200

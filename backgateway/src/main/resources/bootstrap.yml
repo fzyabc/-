@@ -1,0 +1,32 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: backgateway
+  profiles:
+    active: register,backgateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.85.8:8848
+        prefix: fzy
+        file-extension: yml
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: admin
+          uri: lb://admin
+          predicates:
+            - Path=/umsAdmin/**
+        - id: product
+          uri: lb://product
+          predicates:
+            - Path=/pmsBrand/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"

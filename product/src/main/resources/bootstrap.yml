@@ -1,0 +1,20 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: product
+  profiles:
+    active: application,feign,register
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.85.8:8848
+        prefix: fzy
+        file-extension: yml
+  redis:
+    host: 192.168.85.8
+    port: 6379
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
